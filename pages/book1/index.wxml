@@ -1,0 +1,20 @@
+<!--pages/book/index.wxml-->
+<!-- <view class="book" 
+bind:touchstart="touchstart"
+bind:touchmove="touchmove"
+bind:touchend="touchend"
+>
+哈哈
+</view> -->
+
+
+<view class='container'>
+    <view class='page_first'>家谱相册，点击图片翻页查看</view>
+    <view class='page_last'>
+        <block wx:for='{{imgArr}}' wx:key='{{index}}'>
+            <view class="photo_item {{item.isturn?'left':'right'}} {{'zindex'+item.zIndex}}" data-index='{{index}}' bindtap='change' bindtransitionend='finish'>
+                <image src='{{item.src}}' mode='aspectFill'></image>
+            </view>
+        </block>
+    </view>
+</view>

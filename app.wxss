@@ -1,0 +1,18 @@
+/**app.wxss**/
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: #F2F2F2;
+} 
+.mt10 {
+  margin-bottom: 10rpx;
+}
+.mb10 {
+  margin-bottom: 10rpx;
+}
+.ml10 {
+  margin-left: 20rpx;
+}
+.mr10 {
+  margin-right: 20rpx;
+}

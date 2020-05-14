@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="container">
+  <van-tabs active="{{ active }}" sticky="{{true}}" z-index="{{999}}" bind:click="onClick">
+    <van-tab title="未使用" name="used">
+      <view class="tab-item">
+        <gift-item giftData="{{usedList}}" type="0" bind:onExchange="onExchange" />
+        <view wx:if="{{!usedStop}}" class="bottomTxt">--我也是有底线的--</view>
+      </view>
+    </van-tab>
+    <van-tab title="已使用" name="notUsed">
+      <view class="tab-item">
+        <gift-item giftData="{{notUsedList}}" type="1" bind:onOrder="onOrder" />
+        <view wx:if="{{!notUsedStop}}" class="bottomTxt">--我也是有底线的--</view>
+      </view>
+    </van-tab>
+    <van-tab title="已过期" name="expired">
+      <view class="tab-item">
+        <gift-item giftData="{{expiredList}}" type="2" />
+        <view wx:if="{{!expiredStop}}" class="bottomTxt">--我也是有底线的--</view>
+      </view>
+    </van-tab>
+    
+  </van-tabs>
+
+  <!-- 遮罩 -->
+  <van-overlay show="{{ show }}" bind:click="onClickHide"/>
+  <view class="footer">
+    <input class="f-input" bindfocus="bindfocus" placeholder="输入礼册密码"></input>
+    <button class="mini-btn btn" type="warn" size="mini">按钮</button>
+  </view>
+
+  <van-toast id="van-toast" />
+</view>

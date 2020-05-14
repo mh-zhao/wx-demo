@@ -1,0 +1,35 @@
+/**index.wxss**/
+.tab-item {
+  padding-bottom: 162rpx;
+}
+.bottomTxt {
+  padding: 10rpx;
+  text-align: center;
+  color: #999999;
+  margin-top: 30rpx;
+  font-size: 12px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 5;
+  display: flex;
+  width: 100%;
+  padding: 26rpx 30rpx;
+  background: #fff;
+  box-sizing: border-box;
+}
+.footer .f-input {
+  flex: 1;
+  height: 80rpx;
+  padding-left: 20rpx;
+  background: #F2F2F2;
+}
+.footer .btn {
+  width: 158rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-left: 20rpx;
+}

@@ -1,0 +1,36 @@
+<!--components/item.wxml-->
+<view class="product" wx:for="{{giftData}}" wx:key="{{item.id}}" >
+  <view class="p-main">
+    <view class="p-left">
+      <view class="p-mask" wx:if="{{type === 1}}">已兑换</view>
+      <view class="p-mask" wx:if="{{type === 2}}">已过期</view>
+      <image src="{{item.picture}}"></image>
+    </view>
+    <view class="p-desc">
+      <view class="p-title">
+        <text>{{item.productName}}</text>
+      </view>
+      <view class="mt10">
+        <text space="emsp">来 源：{{item.originate}}</text>
+      </view>
+      <view class="mt10">
+        <text>有效期：{{item.expiredStartResult ? item.expiredStartResult : ''}}-{{item.expiredEndResult ? item.expiredEndResult : ''}}</text>
+      </view>
+      <view class="mt10" wx:if="{{type === 2}}">收到时间：{{item.bindDate}}</view>
+    </view>
+  </view>
+  <view class="p-foot" wx:if="{{type !== 2}}">
+    <view class="p-f-left">收到时间：{{item.bindDate}}</view>
+    <view class="p-f-right">
+      <!-- <button class="mini-btn" type="default" size="mini">转赠</button> -->
+      <!-- <button class="mini-btn ml10" type="warn" size="mini">去兑换</button> -->
+      <van-button type="warning"
+      wx:if="{{type === 0}}"
+      bindtap="onExchange"
+      color="#DD1922">去兑换</van-button>
+      <van-button type="default"
+      bindtap="onOrder"
+      wx:if="{{type === 1}}">查看订单</van-button>
+    </view>
+  </view>
+</view>

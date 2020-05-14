@@ -1,0 +1,22 @@
+<!--pages/book/index.wxml-->
+<view class="book">
+  <!-- <view class="pageBtn">
+    <van-button type="default" icon="arrow-left"></van-button>
+    <van-button type="default" icon="arrow"></van-button>
+  </view> -->
+
+  <view class="main">
+    <view class="book">
+      <view
+      wx:for="{{dataList}}"
+      wx:key="*this"
+      data-index="{{index}}"
+      class="b-item {{item.isTurn ? 'turningLeft' : 'turningRight'}}"
+      style="z-index:{{dataList.length -  index}}"
+      bindtap="onItem">
+        <image src="{{item.img}}"></image>
+      </view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,16 @@
+<!--pages/gift_list/index.wxml-->
+<view>
+  <view>
+  banner
+  </view>
+  <view class="g-body">
+    <view class="product">
+      <view class="p-item" wx:for="{{productList}}" wx:key="*this">
+        <view class="p-content">
+          <image src="{{item.img}}"></image>
+          <view class="p-title">{{item.title}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

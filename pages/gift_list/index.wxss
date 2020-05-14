@@ -1,0 +1,33 @@
+/* pages/gift_list/index.wxss */
+.g-body {
+  padding: 23rpx;
+  background: green;
+}
+.product {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product .p-item {
+  width: 50%;
+  padding: 0 6rpx;
+  box-sizing: border-box;
+}
+.product .p-item .p-content {
+  padding: 24rpx;
+  border-radius: 24rpx;
+  overflow: hidden;
+  background: #fff;
+  text-align: center;
+  margin-top: 12rpx;
+}
+.product .p-item image {
+  width: 298rpx;
+  height: 298rpx;
+}
+.product .p-title {
+  font-size: 26rpx;
+  text-align: left;
+  padding: 0 6rpx;
+  height: 70rpx;
+  margin-top: 17rpx;
+}

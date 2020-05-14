@@ -1,0 +1,94 @@
+/* pages/login.wxss */
+.wrap {
+  position: relative;
+}
+.l-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
+}
+.l-bg image {
+  width: 100%;
+  height: 100%;
+}
+.l-head {
+  width: 100%;
+  height: 680rpx;
+}
+.l-main {
+  width: 100%;
+  height: calc(100vh - 844rpx);
+}
+.l-foot {
+  width: 100%;
+  height: 164rpx;
+}
+.main {
+  position: absolute;
+  top: 240rpx;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  min-height: 400rpx;
+}
+.main .form {
+  width: 80%;
+  margin: 30rpx auto;
+}
+.form .label {
+  position: relative;
+}
+.form .label .close {
+  position: absolute;
+  top: 20rpx;
+  right: 0;
+  z-index: 5;
+  padding: 20rpx;
+  font-size: 16px;
+}
+.form .f-input {
+  position: relative;
+  width: 100%;
+  height: 120rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+}
+.form .f-input::after {
+  position: absolute;
+  box-sizing: border-box;
+  content: ' ';
+  pointer-events: none;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #e6e6e6;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.min-width .van-button--default {
+  min-width: 180rpx;
+}
+.form .codeBtn button {
+  position: absolute;
+  top: 32rpx;
+  right: 20rpx;
+  z-index: 5;
+  /* width: 168rpx;  */
+  height: 56rpx;
+  line-height: 56rpx;
+  padding: 0 10px;
+}
+.form .btn {
+  margin-top: 30rpx;
+}
+.form .btn button {
+  width: 100%;
+}
+.disabled-color .van-button--danger, .disabled-color .van-button--default {
+  color: #ccc !important;
+}

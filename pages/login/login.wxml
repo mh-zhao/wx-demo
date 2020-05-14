@@ -1,0 +1,26 @@
+<!--pages/login.wxml-->
+<view class="wrap">
+  <!-- 背景图 -->
+  <view class="l-bg">
+    <view class="l-head"><image src="../../images/loginbg_head.png"></image></view>
+    <view class="l-main"><image src="../../images/loginbg_middle.png"></image></view>
+    <view class="l-foot"><image src="../../images/loginbg_foot.png"></image></view>
+  </view>
+  <!-- 主体内容 -->
+  <view class="main">
+    <view class="form">
+      <view class="label">
+        <input class="f-input" model:value="{{phoneNum}}" placeholder="输入手机号"></input>
+        <view wx:if="{{phoneNum.length}}" bindtap="handlerClose"  class="close"><van-icon name="close" /></view>
+      </view>
+      <view class="label codeBtn">
+        <input class="f-input" model:value="{{code}}" placeholder="短信验证码"></input>
+        <van-button class="{{phoneNum ? 'min-width' : ' min-width disabled-color'}}" type="default" bindtap="getCode">{{codeTxt}}</van-button>
+      </view>
+      <view class="btn">
+        <van-button class="{{phoneNum && code ? '' : 'disabled-color'}}" bind:click="handlerLogin"  type="danger" color="DD1922">登录</van-button>
+      </view>
+    </view>
+  </view>
+  <van-toast id="van-toast" />
+</view>
